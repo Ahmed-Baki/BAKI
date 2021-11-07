@@ -10772,7 +10772,7 @@ local text =
 ' }\n'..' ♫ الايدي  ⇇{ '..idgp..
 ' }\n'..' ♫ الايدي بالصوره  ⇇{ '..idph..
 ' }\n'..' ♫ الرفع  ⇇{ '..setadd..
-' }\n'..' ♫ الحظر  ⇇{ '..banm..' }\n\n ♫♫──═❲[《SOURCE BAKI》 ](t.me/SourceBaki)❳═───═ ♫\♫♫ ق♫ة سورس باكي♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n [ ❲[《SOURCE BAKI》 ](t.me/SourceBaki)❳](t.me/SourceBaki) \n'
+' }\n'..' ♫ الحظر  ⇇{ '..banm..
 send(msg.chat_id_, msg.id_,text)     
 end
 if text ==('تثبيت') and msg.reply_to_message_id_ ~= 0 and Mod(msg) then  
