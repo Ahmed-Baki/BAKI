@@ -9171,7 +9171,7 @@ end
 return false
 end
 
-if text == ""..(database:get(bot_id..'Name:Bot') or 'باكي').."" or text == 'بوت' or text'يا بوت' then  
+if text == ""..(database:get(bot_id..'Name:Bot') or 'باكي').."" then  
 Namebot = (database:get(bot_id..'Name:Bot') or 'باكي')
 local DRAGON_Msg = {
 'نعم يروحي♥️🙈',
