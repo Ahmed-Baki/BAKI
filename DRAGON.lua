@@ -21,29 +21,29 @@ file:write(serialized)
 file:close()  
 end  
 if not database:get(id_server..":token") then
-io.write('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\na♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n\27')
+io.write('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\na♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n\27')
 local token = io.read()
 if token ~= '' then
 local url , res = https.request('https://api.telegram.org/bot'..token..'/getMe')
 if res ~= 200 then
-print('\27[0;31m♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n التوكن غير صحيح تاكد منه ثم ارسله')
+print('\27[0;31m♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n التوكن غير صحيح تاكد منه ثم ارسله')
 else
-io.write('\27[0;31m تم حفظ التوكن بنجاح \na♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n27[0;39;49m')
+io.write('\27[0;31m تم حفظ التوكن بنجاح \na♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n27[0;39;49m')
 database:set(id_server..":token",token)
 end 
 else
-print('\27[0;35m♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ ┉\n لم يتم حفظ التوكن ارسل لي التوكن الان')
+print('\27[0;35m♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ ┉\n لم يتم حفظ التوكن ارسل لي التوكن الان')
 end 
 os.execute('lua DRAGON.lua')
 end
 if not database:get(id_server..":SUDO:ID") then
-io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n\27[0;33;49m')
+io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n\27[0;33;49m')
 local SUDOID = io.read()
 if SUDOID ~= '' then
-io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n27[0;39;49m')
+io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n27[0;39;49m')
 database:set(id_server..":SUDO:ID",SUDOID)
 else
-print('\27[0;31m♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ ┉ ┉\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
+print('\27[0;31m♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ ┉ ┉\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end 
 os.execute('lua DRAGON.lua')
 end
@@ -79,7 +79,7 @@ token="]]..database:get(id_server..":token")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "ٴ♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵��� ☆❳━━━♫ٴ ♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫"
+echo "ٴ♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵��� ☆❳━━━♫ٴ ♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫"
 echo "TG IS NOT FIND IN FILES BOT"
 echo "ٴ♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵��� ☆❳━━━♫ٴ ٴ♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵��� ☆❳━━━♫ٴ ┉"
 exit 1
@@ -921,14 +921,14 @@ keyboard = start
 else
 keyboard = {
 {'باكي'},
-{'♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫'},
+{'♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫'},
 {'اغاني','افلام','قران'},
 {'روايات'},
-{'♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫'},
+{'♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫'},
 {'تويت','صراحه'},
-{'♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫'},
+{'♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫'},
 {'نكته','حكمه','استوري'},
-{'♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫'},
+{'♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫'},
 {'المطور','انا مين'},
 }
 end
@@ -1097,14 +1097,28 @@ os.execute('wget https://raw.githubusercontent.com/Ahmed-Baki/BAKI/main/DRAGON.l
 send(msg.chat_id_, msg.id_,'♫︙ تم تحديث السورس \n♫︙ لديك اخر اصدار لسورس باكي\n♫︙ الاصدار » { v 1.6 }')
 dofile('DRAGON.lua')  
 end
-if text == '♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫' and DevSoFi(msg) then
+if text == '♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
 [CH](t.me/SourceBaki)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫', url="t.me/SourceBaki"}}, 
+{{text = '♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫', url="t.me/SourceBaki"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == 'تواصل' and DevSoFi(msg) then
+database:del(bot_id..'Srt:Bot') 
+local Text = [[ 
+[TWL](t.me/HelpBaki)
+]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '♫━❲☆ 𝐵𝐴𝑅 𝐵𝐴𝐾𝐼 ☆❳━♫', url="t.me/HelpBAki"}}, 
+{{text = '♫━❲☆ فــواصــل🌿❤️ ☆❳━♫', url="t.me/mokfhr"}}, 
+{{text = '♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫', url="t.me/SourceBaki"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -1141,7 +1155,7 @@ return false
 end
 if text == ("المطورين♫") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'Sudo:User')
-t = "\n♫︙ قائمة المطورين \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمة المطورين \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1157,7 +1171,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("الثانويين♫") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'Dev:SoFi:2')
-t = "\n♫︙ قائمة الثانويين \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمة الثانويين \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1178,7 +1192,7 @@ local updatech =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'بہاكہيہ.', url="t.me/Baki_Owner"}},
+{{text = 'ツبہاكہيہ.', url="t.me/Baki_Owner"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(updatech).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -1187,7 +1201,7 @@ end
 -----------
 if text == ("قائمه العام♫") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'GBan:User')
-t = "\n♫︙ قائمه المحظورين عام \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمه المحظورين عام \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1204,7 +1218,7 @@ return false
 end
 if text == ("قائمه الكتم العام♫") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'Gmute:User')
-t = "\n♫︙ قائمة المكتومين عام \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمة المكتومين عام \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -2471,7 +2485,7 @@ send(msg.chat_id_, msg.id_, texts)
 end
 if text == "الاسماء المكتومه" and Constructor(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
 local All_name = database:smembers(bot_id.."DRAGON:blocname"..msg.chat_id_)
-t = "\n♫︙ قائمة الاسماء المكتومه \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ \n"
+t = "\n♫︙ قائمة الاسماء المكتومه \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ \n"
 for k,v in pairs(All_name) do
 t = t..""..k.."- (["..v.."])\n"
 end
@@ -2665,18 +2679,18 @@ end,nil)
 end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then  
 local Text = [[  
-╭━━━❲☆━━━━━━━━━━━━━━━☆❳━━━╮
+╭━━━❲☆━━━━━☆❳━━━╮
 [𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙱𝙰𝙺𝙸](t.me/SourceBaki)
 [𝚝𝚑𝚎 𝚍𝚎𝚎𝚙 𝚜𝚘𝚞𝚛𝚌𝚎](t.me/SourceBaki)
 [𝚒𝚗 𝚝𝚎𝚕𝚎𝚐𝚛𝚊𝚖](t.me/SourceBaki)
-╰━━━❲☆━━━━━━━━━━━━━━━☆❳━━━╯
+╰━━━❲☆━━━━━☆❳━━━╯
 ]]  
 keyboard = {}   
 keyboard.inline_keyboard = {  
-{{text = 'ツب̷اگ̷ي̷ ', url="https://t.me/Baki_Owner"}},  
+{{text = ' ツツبہاكہيہ', url="https://t.me/Baki_Owner"}},  
 {{text = ' 𝐵𝐴𝑅 𝐵𝐴𝐾𝐼 ',url="https://t.me/HelpBaki"}},
 {{text = 'فــواصــل🌿❤️',url="https://t.me/mokfhr"}},
-{{text = '²₀³₁“ ꜱɪʀɪᴀ" ₉₀ | ₁₂.₀₀ ᴬᴹ', url="https://t.me/SourceBaki"}},  
+{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙱𝙰𝙺𝙸', url="https://t.me/SourceBaki"}},  
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AddBaki/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -2718,7 +2732,7 @@ GetFile_Bot(msg)
 end
 if text == 'الاوامر المضافه' and Constructor(msg) then
 local list = database:smembers(bot_id..'List:Cmd:Group:New'..msg.chat_id_..'')
-t = "♫︙ قائمه الاوامر المضافه  \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "♫︙ قائمه الاوامر المضافه  \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 Cmds = database:get(bot_id.."Set:Cmd:Group:New1"..msg.chat_id_..':'..v)
 print(Cmds)
@@ -3594,7 +3608,7 @@ return false
 end
 if text == ("قائمه العام") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'GBan:User')
-t = "\n♫︙ قائمة المحظورين عام \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمة المحظورين عام \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -3957,7 +3971,7 @@ send(msg.chat_id_, msg.id_, "\n♫︙ تم مسح قائمة المطورين  "
 end
 if text == ("المطورين") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'Sudo:User')
-t = "\n♫︙ قائمة مطورين البوت \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمة مطورين البوت \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4008,7 +4022,7 @@ end
 end
 
 if text == 'الملفات' and DevSoFi(msg) then
-t = '♫︙ ملفات السورس باكي ↓\n ♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ \n'
+t = '♫︙ ملفات السورس باكي ↓\n ♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ \n'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
@@ -4025,8 +4039,8 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n♫︙ اهلا بك في متجر ملفات باكي\n♫︙ ملفات السورس ↓\n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n\n"
-local TextE = "\n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n♫︙ علامة تعني { ✔️ } ملف مفعل\n♫︙ علامة تعني { ✖ } ملف معطل\n♫︙ قناة سورس باكي ↓\n".."♫︙ [اضغط هنا لدخول](t.me/SourceBaki) \n"
+local TextS = "\n♫︙ اهلا بك في متجر ملفات باكي\n♫︙ ملفات السورس ↓\n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n\n"
+local TextE = "\n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n♫︙ علامة تعني { ✔️ } ملف مفعل\n♫︙ علامة تعني { ✖ } ملف معطل\n♫︙ قناة سورس باكي ↓\n".."♫︙ [اضغط هنا لدخول](t.me/SourceBaki) \n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
 local Check_File_is_Found = io.open("File_Bot/"..name,"r")
@@ -4248,7 +4262,7 @@ end
 
 if text == 'قائمه المالك' and Sudo(msg) then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n♫︙ قائمه المالك \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمه المالك \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4265,7 +4279,7 @@ return false
 end
 if text == ("صيح للمالك") or text == ("تاك للمالك") then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n♫︙ وينكم تعالو يريدوكم بالمجموعه \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ وينكم تعالو يريدوكم بالمجموعه \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4432,7 +4446,7 @@ st = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..tok
 eker = JSON.decode(st)
 if eker.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."Basic:Constructor"..msg.chat_id_)
-t = "♫︙ المنشئين الاساسين تعالو مخرب \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "♫︙ المنشئين الاساسين تعالو مخرب \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4454,7 +4468,7 @@ Srrt = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..t
 Sto = JSON.decode(Srrt)
 if Sto.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."Basic:Constructor"..msg.chat_id_)
-t = "♫︙ المنشئين الاساسين تعالو مخرب \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "♫︙ المنشئين الاساسين تعالو مخرب \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4541,7 +4555,7 @@ return false
 end
 if text == 'المنشئين الاساسين' and CoSu(msg) then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n♫︙ قائمة المنشئين الاساسين \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمة المنشئين الاساسين \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4558,7 +4572,7 @@ return false
 end
 if text == ("تاك للمنشئين الاساسين") or text == ("صيح المنشئين الاساسين") then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n♫︙ وينكم تعالو يريدوكم بالمجموعه \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ وينكم تعالو يريدوكم بالمجموعه \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4726,7 +4740,7 @@ end
 
 if text == ("المنشئين") and BasicConstructor(msg) then
 local list = database:smembers(bot_id..'Constructor'..msg.chat_id_)
-t = "\n♫︙ قائمة المنشئين \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمة المنشئين \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4742,7 +4756,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمنشئين") or text == ("صيح المنشئين") then
 local list = database:smembers(bot_id..'Constructor'..msg.chat_id_)
-t = "\n♫︙ وينكم تعالو يريدوكم بالمجموعه \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ وينكم تعالو يريدوكم بالمجموعه \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4923,7 +4937,7 @@ send(msg.chat_id_, msg.id_, texts)
 end
 if text == ("المدراء") and Constructor(msg) then
 local list = database:smembers(bot_id..'Manager'..msg.chat_id_)
-t = "\n♫︙ قائمة المدراء \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمة المدراء \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4939,7 +4953,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمدراء") or text == ("صيح المدراء") then
 local list = database:smembers(bot_id..'Manager'..msg.chat_id_)
-t = "\n♫︙ وينكم تعالو يريدوكم بالمجموعه \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ وينكم تعالو يريدوكم بالمجموعه \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5159,7 +5173,7 @@ return false
 end
 if text == ("الثانويين") and SudoBot(msg) then
 local list = database:smembers(bot_id.."Dev:SoFi:2")
-t = "\n♫︙ قائمة مطورين الثانويين للبوت \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمة مطورين الثانويين للبوت \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5210,7 +5224,7 @@ send(msg.chat_id_, msg.id_, '♫︙ تم مسح الادمنيه')
 end
 if text == ("الادمنيه") and Manager(msg) then
 local list = database:smembers(bot_id..'Mod:User'..msg.chat_id_)
-t = "\n♫︙ قائمة الادمنيه \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمة الادمنيه \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5226,7 +5240,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للادمنيه") or text == ("صيح الادمنيه") then
 local list = database:smembers(bot_id..'Mod:User'..msg.chat_id_)
-t = "\n♫︙ وينكم تعالو يريدوكم بالمجموعه \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ وينكم تعالو يريدوكم بالمجموعه \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5738,7 +5752,7 @@ send(msg.chat_id_, msg.id_, '♫︙ تم مسح المميزين')
 end
 if text == ("المميزين") and Mod(msg) then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n♫︙ قائمة مميزين المجموعه \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمة مميزين المجموعه \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5754,7 +5768,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمميزين") or text == ("صيح المميزين") then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n♫︙ وينكم تعالو يريدوكم بالمجموعه \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ وينكم تعالو يريدوكم بالمجموعه \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5933,7 +5947,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم مسح جميع المتوحدين')
 end
 if text == ("تاك للمتوحدين") and Mod(msg) then
 local list = database:smembers(bot_id..'Mote:User'..msg.chat_id_)
-t = "\n ♫ قائمة متوحدين الجروب \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n ♫ قائمة متوحدين الجروب \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6071,7 +6085,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم مسح جميع الكلاب')
 end
 if text == ("تاك للكلاب") and Mod(msg) then
 local list = database:smembers(bot_id..'Modde:User'..msg.chat_id_)
-t = "\n ♫ قائمه كلاب الجروب \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n ♫ قائمه كلاب الجروب \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6140,7 +6154,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع حمير من الج�
 end
 if text == ("تاك للحمير") and Mod(msg) then
 local list = database:smembers(bot_id..'Sakl:User'..msg.chat_id_)
-t = "\n ♫ قائمة حمير الجروب \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n ♫ قائمة حمير الجروب \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6210,7 +6224,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع وتكات الجرو
 end
 if text == ("تاك للوتكات") and Mod(msg) then
 local list = database:smembers(bot_id..'Motte:User'..msg.chat_id_)
-t = "\n ♫ قائمة وتكات الجروب \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n ♫ قائمة وتكات الجروب \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6348,7 +6362,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع الارامل بال
 end
 if text == ("تاك للارامل") and Mod(msg) then
 local list = database:smembers(bot_id..'Bro:User'..msg.chat_id_)
-t = "\n ♫ قائمة ارامل الجروب \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n ♫ قائمة ارامل الجروب \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6417,7 +6431,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع الخولات بال
 end
 if text == ("تاك للخولات") and Mod(msg) then
 local list = database:smembers(bot_id..'Girl:User'..msg.chat_id_)
-t = "\n ♫ قائمة خولات الجروب \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n ♫ قائمة خولات الجروب \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6486,7 +6500,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل الازببه من الجرو
 end
 if text == ("تاك الازببه") and Mod(msg) then
 local list = database:smembers(bot_id..'Bakra:User'..msg.chat_id_)
-t = "\n ♫ قائمة البقرات الجروب \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n ♫ قائمة البقرات الجروب \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6555,7 +6569,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع المزز بالجر
 end
 if text == ("تاك للمزز") and Mod(msg) then
 local list = database:smembers(bot_id..'Tele:User'..msg.chat_id_)
-t = "\n ♫ قائمة مزز الجروب \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n ♫ قائمة مزز الجروب \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6624,7 +6638,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك للاكساس") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ♫ قائمة كساس الجروب \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n ♫ قائمة كساس الجروب \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6693,7 +6707,7 @@ send(msg.chat_id_, msg.id_, '\n♫︙ تم مسح المحظورين')
 end
 if text == ("المحظورين") then
 local list = database:smembers(bot_id..'Ban:User'..msg.chat_id_)
-t = "\n♫︙ قائمة محظورين المجموعه \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمة محظورين المجموعه \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6933,7 +6947,7 @@ send(msg.chat_id_, msg.id_, '♫︙ تم مسح المكتومين')
 end
 if text == ("المكتومين") and Mod(msg) then
 local list = database:smembers(bot_id..'Muted:User'..msg.chat_id_)
-t = "\n♫︙ قائمة المكتومين \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمة المكتومين \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8065,10 +8079,10 @@ local text =
 '\n⚙️┇𝙶𝚁𝙾𝚄𝙿 𝚂𝙴𝚃𝚃𝙸𝙽𝙶𝚂'..
 '\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ '..
 '\n𖤛︙ اعدادات الكروب كتالي √↓'..
-'\n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫'..
+'\n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫'..
 '\n𖤛︙  علامة ال {🔓} تعني مفعل'..
 '\n𖤛︙  علامة ال {🔐} تعني معطل'..
-'\n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫'..
+'\n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫'..
 '\n𖤛︙  الروابط » { '..lock_links..
 ' }\n'..'𖤛︙  المعرفات » { '..lock_user..
 ' }\n'..'𖤛︙  التاك » { '..lock_hash..
@@ -8079,7 +8093,7 @@ local text =
 ' }\n'..'𖤛︙  الماركدون » { '..lock_mark..
 ' }\n'..'𖤛︙  التعديل » { '..lock_edit..
 ' }\n'..'𖤛︙  تعديل الميديا » { '..lock_edit_med..
-' }\n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫'..
+' }\n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫'..
 '\n'..'𖤛︙  الكلايش » { '..lock_spam..
 ' }\n'..'𖤛︙  الكيبورد » { '..lock_inlin..
 ' }\n'..'𖤛︙  الاغاني » { '..lock_vico..
@@ -8088,7 +8102,7 @@ local text =
 ' }\n'..'𖤛︙  الدردشه » { '..lock_text..
 ' }\n'..'𖤛︙   الفيديو » { '..lock_ved..
 ' }\n'..'𖤛︙   الصور » { '..lock_photo..
-' }\n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫'..
+' }\n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫'..
 '\n'..'𖤛︙   الصوت » { '..lock_muse..
 ' }\n'..'𖤛︙  الملصقات » { '..lock_ste..
 ' }\n'..'𖤛︙  الجهات » { '..lock_phon..
@@ -8099,10 +8113,10 @@ local text =
 ' }\n'..'𖤛︙  التكرار » { '..flood..
 ' }\n'..'𖤛︙  الترحيب » { '..welcome..
 ' }\n'..'𖤛︙  عدد التكرار » { '..NUM_MSG_MAX..
-' }\n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫'..
+' }\n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫'..
 '\n𖤛︙  علامة ال {🔓} تعني مفعل'..
 '\n𖤛︙  علامة ال {🔐} تعني معطل'..
-'\n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫'..
+'\n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫'..
 '\n'..'𖤛︙  امر صيح » { '..kickme..
 ' }\n'..'𖤛︙  امر اطردني » { '..sehuser..
 ' }\n'..'𖤛︙  امر مين ضافني » { '..addme..
@@ -8244,7 +8258,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = '  🌖⁽'..result.first_name_..'₎ 🌖',url="t.me/"..result.username_}},
-{{text = 'بہاكہيہ ',url="t.me/Baki_Owner"}},  
+{{text = 'ツبہاكہيہ ',url="t.me/Baki_Owner"}},  
 }
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
@@ -8484,7 +8498,7 @@ end
 
 if text == "قائمه المنع" and Manager(msg) then   
 local list = database:smembers(bot_id.."DRAGON1:List:Filter"..msg.chat_id_)  
-t = "\n♫︙ قائمة المنع \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمة المنع \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do  
 local DRAGON_Msg = database:get(bot_id.."DRAGON1:Add:Filter:Rp2"..v..msg.chat_id_)   
 t = t..""..k.."- "..v.." » {"..DRAGON_Msg.."}\n"    
@@ -8630,7 +8644,7 @@ return false
 end
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID,filter_ = {ID = "ChannelMembersBots"},offset_ = 0,limit_ = 100 },function(extra,result,success)
 local admins = result.members_  
-text = "\n♫︙ قائمة البوتات الموجوده \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+text = "\n♫︙ قائمة البوتات الموجوده \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 local n = 0
 local t = 0
 for i=0 , #admins do 
@@ -8649,7 +8663,7 @@ send(msg.chat_id_, msg.id_, "♫︙ لا توجد بوتات في المجموع
 return false 
 end
 if #admins == i then 
-local a = '\n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n♫︙ عدد البوتات التي هنا >> {'..n..'} بوت\n'
+local a = '\n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n♫︙ عدد البوتات التي هنا >> {'..n..'} بوت\n'
 local f = '♫︙ عدد البوتات التي هي ادمن >> {'..t..'}\n♫︙ ملاحضه علامة ال (✯) تعني ان البوت ادمن \n'
 send(msg.chat_id_, msg.id_, text..a..f)
 end
@@ -8738,7 +8752,7 @@ if #list == 0 then
 send(msg.chat_id_, msg.id_,'♫︙ لا توجد صلاحيات مضافه')
 return false
 end
-t = "\n♫︙ قائمة الصلاحيات المضافه \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمة الصلاحيات المضافه \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 var = database:get(bot_id.."Comd:New:rt:bot:"..v..msg.chat_id_)
 if var then
@@ -9283,7 +9297,7 @@ return false
 end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 200
 },function(ta,DRAGON)
-local t = "\nツ قائمة الاعضاء \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+local t = "\nツ قائمة الاعضاء \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 x = 0
 local list = DRAGON.members_
 for k, v in pairs(list) do
@@ -9723,7 +9737,7 @@ send(msg.chat_id_, msg.id_,"♫︙تم مسح ردود المدير")
 end
 if text == ("ردود المدير") and Manager(msg) then
 local list = database:smembers(bot_id.."List:Manager"..msg.chat_id_.."")
-text = "♫︙قائمه ردود المدير \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+text = "♫︙قائمه ردود المدير \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."Add:Rd:Manager:Gif"..v..msg.chat_id_) then
 db = "متحركه 🎭"
@@ -9926,7 +9940,7 @@ if audios.Info == true then
 local Text ='♫︙تم اختيار المقطع الصوتي لك'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫.',url="t.me/SourceBaki"}},
+{{text = '♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫.',url="t.me/SourceBaki"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -10044,7 +10058,7 @@ PRo = '❴ ✔️ ❵'
 else
 PRo = '❴ ✖ ❵'
 end 
-send(msg.chat_id_, msg.id_,'\n♫︙صلاحيات البوت هي\n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n♫︙  علامة ال {✔️} تعني مفعل\n♫︙  علامة ال {✖} تعني غير مفعل\n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n♫︙تغير معلومات المجموعة ↞ '..INf..'\n♫︙حذف الرسائل ↞ '..DEL..'\n♫︙حظر المستخدمين ↞ '..REs..'\n♫︙دعوة المستخدمين ↞ '..INv..'\n♫︙ثتبيت الرسالة ↞ '..Pin..'\n♫︙اضافة مشرفين ↞ '..PRo)   
+send(msg.chat_id_, msg.id_,'\n♫︙صلاحيات البوت هي\n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n♫︙  علامة ال {✔️} تعني مفعل\n♫︙  علامة ال {✖} تعني غير مفعل\n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n♫︙تغير معلومات المجموعة ↞ '..INf..'\n♫︙حذف الرسائل ↞ '..DEL..'\n♫︙حظر المستخدمين ↞ '..REs..'\n♫︙دعوة المستخدمين ↞ '..INv..'\n♫︙ثتبيت الرسالة ↞ '..Pin..'\n♫︙اضافة مشرفين ↞ '..PRo)   
 end
 end
 if text == "تعطيل الانستا" and Manager(msg) then
@@ -10085,7 +10099,7 @@ User_id = "@"..b.username_
 else
 User_id = msg.sender_user_id_
 end --الكود حصري سورس باكي يعني لو بكتهن راح اعرفك انت الاخذتهن
-local t = "\n♫︙المستخدم ~ ["..User_id .."] يصيح المشرفين \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+local t = "\n♫︙المستخدم ~ ["..User_id .."] يصيح المشرفين \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 k = 0
 for i,v in pairs(data.members_) do
 if bot_id ~= v.user_id_ then 
@@ -10127,7 +10141,7 @@ end
 return false
 end
 local list = database:smembers(bot_id.."botss:DRAGON:List:Rd:Sudo")
-text = "\nقائمة ردود المتعدده \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+text = "\nقائمة ردود المتعدده \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 for k,v in pairs(list) do
 db = "رساله "
 text = text..""..k.." => {"..v.."} => {"..db.."}\n"
@@ -11459,13 +11473,13 @@ return false
 end
 local Text =[[
 *اهلا انتツفي اضافات البوت*
-*♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫*
+*♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫*
 * يمكنك معرفة حاله تفعيل الاضافات *
 * من خلال ارسال حاله الاضافات *
-*♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫*
+*♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫*
 *يمكنك تصفح الاضافات من خلال*
 *الكيبورد الموجود في الأسفل*
-*♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫*
+*♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫*
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11496,13 +11510,13 @@ if text and text:match("^زخرفه (.*)$") and database:get(bot_id.." sofi:zhrf
 local TextZhrfa = text:match("^زخرفه (.*)$")
 zh = https.request('https://rudi-dev.tk/Amir1/Boyka.php?en='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
-t = "\n♫︙ قائمه الزخرفه \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n♫︙ قائمه الزخرفه \n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n"
 i = 0
 for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  "..v.." \n"
 end
-send(msg.chat_id_, msg.id_, t..'♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n♫︙ ➫ .[ ❍ ┇𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝑺𝑰𝑹𝑰𝑨 𓏴   𓆪. ](t.me/SourceBaki)➤ ')
+send(msg.chat_id_, msg.id_, t..'♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n♫︙ ➫ .[ ❍ ┇𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝑺𝑰𝑹𝑰𝑨 𓏴   𓆪. ](t.me/SourceBaki)➤ ')
 end
 if text == "تعطيل الابراج" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '♫︙ تم تعطيل الابراج')
@@ -11680,10 +11694,10 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 قفل + فتح ← الامر… 
 ⚡️← { بالتقييد ، بالطرد ، بالكتم }
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 🍁الروابط
 ⚡️المعرف
 🍁التاك
@@ -11694,7 +11708,7 @@ local Teext =[[
 ⚡️الملفات
 ⚡️الصور
 🍁التفليش
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 🍁الماركداون
 🍁البوتات
 ⚡️الاباحي
@@ -11705,13 +11719,13 @@ local Teext =[[
 ⚡️الفيديو
 ⚡️الانلاين
 ⚡️الدردشه
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ⚡️التوجيه
 ⚡️الاغاني
 ⚡️الصوت
 ⚡️الجهات
 🍁الاشعارات
-[🍁♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ 🍁](t.me/SourceBaki)
+[🍁♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ 🍁](t.me/SourceBaki)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11738,9 +11752,9 @@ return false
 end
 local Teext =[[
 
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ 
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ 
 🍁اوامر تفعيل وتعطيل ⚡️
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 🍁اطردني
 ⚡️صيح
 ⚡️ضافني
@@ -11769,7 +11783,7 @@ local Teext =[[
 🍁ردود البوت
 🍁اوامر التسليه 
 🍁صورتي 
-[🍁♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ ⚡️](t.me/SourceBaki)
+[🍁♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ ⚡️](t.me/SourceBaki)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11795,14 +11809,14 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ 
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ 
 ♫ اوامر الوضع ♫ - اضف
 ⩹━━━━━━ 𝑺𝑶𝑼𝑹𝑪𝑬 ??𝑰𝑹𝑰𝑨 𓏴  ━━━━━━⩺
 ♫اضف / مسح ← رد
 ♫اضف / مسح ← صلاحيه
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ضع + امر …
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫اسم
 ♫رابط
 ♫ترحيب
@@ -11811,11 +11825,11 @@ local Teext =[[
 ♫صوره
 ♫وصف
 ♫تكرار + عدد
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫اوامر مسح / المسح ← امر
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ مسح + امر ↓
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ الايدي 
 ♫ المميزين
 ♫ الادمنيه
@@ -11832,12 +11846,12 @@ local Teext =[[
 ♫قائمه منع الملصقات
 ♫ مسح قائمه المنع
 ♫ المحذوفين
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ مسح  امر + الامر القديم  
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ الاوامر المضافه ( لعرض الاوامر المضافه ) 
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
-[♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫](t.me/SourceBaki)
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
+[♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫](t.me/SourceBaki)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11863,9 +11877,9 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ 
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ 
 ♫اوامر تنزيل ورفع
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫مميز
 ♫ادمن
 ♫مدير
@@ -11878,9 +11892,9 @@ local Teext =[[
 ♫القيود 
 ♫تنزيل جميع الرتب
 ♫تنزيل الكل 
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ اوامر التغير …
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫تغير رد المطور + اسم
 ♫تغير رد المالك + اسم
 ♫تغير رد منشئ الاساسي + اسم
@@ -11890,9 +11904,9 @@ local Teext =[[
 ♫تغير رد المميز + اسم
 ♫تغير رد العضو + اسم
 ♫تغير امر الاوامر
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ 
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ 
 ♫ اوامر المجموعه ??️
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ استعاده الاوامر 
 ♫ تحويل كالاتي  بالرد على صوره او ملصق او صوت او بصمه بالامر ← تحويل 
 ♫ صيح ~ تاك ~ المميزين : الادمنيه : المدراء : المنشئين : المنشئين الاساسين
@@ -11936,8 +11950,8 @@ local Teext =[[
 ♫نسبه الانوثه
 ♫الساعه
 ♫التاريخ
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
-[♫ ♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ ♫](t.me/SourceBaki)
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
+[♫ ♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ ♫](t.me/SourceBaki)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11964,7 +11978,7 @@ return false
 end
 local Teext =[[
 ♫ اوامر المطورين ♫
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ تفعيل ← تعطيل 
 ♫المجموعات ← المشتركين ← الاحصائيات
 ♫رفع ← تنزيل منشئ اساسي
@@ -11972,9 +11986,9 @@ local Teext =[[
 ♫مسح المنشئين ← المنشئين
 ♫ اسم ~ ايدي + بوت غادر 
 ♫اذاعه 
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ 
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ 
 ♫ اوامر مطور الاساسي
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫تفعيل
 ♫تعطيل
 ♫مسح الاساسين
@@ -11984,7 +11998,7 @@ local Teext =[[
 ♫ مسح المطورين
 ♫ المطورين
 ♫ رفع | تنزيل مطور
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ اسم البوت + غادر
 ♫غادر
 ♫ اسم بوت + الرتبه
@@ -11996,13 +12010,13 @@ local Teext =[[
 ♫ مسح قائمه العام
 ♫ جلب نسخه الاحتياطيه
 ♫ رفع نسخه الاحتياطيه
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫اذاعه خاص
 ♫اذاعه
 ♫اذاعه بالتوجيه
 ♫ اذاعه بالتوجيه خاص
 ♫اذاعه بالتثبيت
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫جلب نسخه البوت
 ♫رفع نسخه البوت
 ♫ضع عدد الاعضاء + العدد
@@ -12014,20 +12028,20 @@ local Teext =[[
 ♫اضف/مسح رد عام
 ♫الردود العامه
 ♫مسح الردود العامه
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫الاشتراك الاجباري
 ♫تعطيل الاشتراك الاجباري
 ♫تفعيل الاشتراك الاجباري
 ♫مسح رساله الاشتراك
 ♫تغير رساله الاشتراك
 ♫تغير الاشتراك
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫الاحصائيات
 ♫المشتركين
 ♫المجموعات 
 ♫تفعيل/تعطيل المغادره
 ♫مسح الجروبات
-[♫ ♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ ♫](t.me/SourceBaki)
+[♫ ♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ ♫](t.me/SourceBaki)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12055,31 +12069,31 @@ end
 local Teext =[[
 
 ♫اوامر الاعضاء كالتالي ↓
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ عرض معلوماتك ↑↓
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ ايديي ← اسمي 
 ♫ رسايلي ← مسح رسايلي 
 ♫رتبتي ← سحكاتي 
 ♫مسح سحكاتي ← المنشئ 
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ اوامر المجموعه ↑↓
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ الرابط ← القوانين – الترحيب
 ♫ايدي ← اطردني
 ♫ اسمي ← المطور  
 ♫ كشف ~ بالرد بالمعرف
  ♫قول + كلمه
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ اسم البوت + الامر ↑↓
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ بوسه بالرد 
 ♫مصه بالرد
 ♫رزله بالرد 
 ♫شنو رئيك بهذا بالرد
 ♫شنو رئيك بهاي بالرد
 ♫تحب هذا
-[♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫](t.me/SourceBaki)
+[♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫](t.me/SourceBaki)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12105,57 +12119,57 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ 
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ 
 ♫ اوامر التسليه ♫ 
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
     ?? اوامر جديده ومميزه  ↓
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ اكتب ❪ باد ❫ واستمتع 
 😹  بالاسئله المحرجه 
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫  اكتب ❪ بوستات ❫ واستمتع 
 🌚❤️ بالبوستات العظيمه
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ رفع + تنزيل ← الامࢪ ↓
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ رفع + تنزيل ← كلب
 ♫ تاك للكلاب
 ♫ مسح الكلاب
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ رفع + تنزيل ← قرد 
 ♫ تاك لقروده
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ رفع + تنزيل ← علي زبي
   ♫ تاك الازببه 
  ♫ مسح الازببه
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ رفع + تنزيل ← حمار
 ♫ تاك للحمير
 ♫  مسح الحمير
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫ رفع + تنزيل ← مره
 ♫ تاك للنسوان
  ♫ مسح النسوان
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫  رفع + تنزيل ← زوجتي
 ♫  تاك للزوجات
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
  ♫ رفع + تنزيل ← متوحد
  ♫ تاك للمتوحدين
  ♫ مسح المتوحدين
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
  ♫ رفع + تنزيل ← خنزير
  ♫ تاك للخنازير
  ♫ مسح الخنازير
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 ♫  رفع + تنزيل ← خول
  ♫ تاك للخولات
  ♫ مسح الخولات
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
  ♫ زواج + طلاق
  ♫ تاك للمتزوجين
  ♫ مسح المتزوجين
-[♫  ♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ ♫ ](t.me/SourceBaki)
+[♫  ♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ ♫ ](t.me/SourceBaki)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12183,7 +12197,7 @@ end
 local Teext =[[
 اتبع الازرار تحت 
 واستمتع للأوامر سورس باكي 🕹️
-[♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫](t.me/SourceBaki)
+[♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫](t.me/SourceBaki)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12211,7 +12225,7 @@ return false
 end
 local Teext =[[
 انت الان في قائمة كتم الأسماء
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 الاوامر الخاصة فـي كتم الاسماء 
 تفعيل كتم الاسم
 تعطيل كتم الاسم
@@ -12231,7 +12245,7 @@ keyboard.inline_keyboard = {
 {text = ' القائمة الرئيسيه ', callback_data="/add"},
 },
 {
-{text = '♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ ', url="t.me/SourceBaki"},
+{text = '♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ ', url="t.me/SourceBaki"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12244,7 +12258,7 @@ return false
 end
 local Teext =[[
 انت الان في قائمة التوحيد
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 الاوامر الخاصة فـي التوحيد 
 تفعيل التوحيد
 تعطيل التوحيد
@@ -12264,7 +12278,7 @@ keyboard.inline_keyboard = {
 {text = ' القائمة الرئيسيه ', callback_data="/add"},
 },
 {
-{text = '♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ ', url="t.me/SourceBaki"},
+{text = '♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ ', url="t.me/SourceBaki"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12277,7 +12291,7 @@ return false
 end
 local Teext =[[
 انت الان في قائمة تنبيه الاسماء
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 الاوامر الخاصة فـي تنبيه الاسماء 
 تفعيل تنبيه الاسماء
 تعطيل تنبيه الاسماء
@@ -12294,7 +12308,7 @@ keyboard.inline_keyboard = {
 {text = ' القائمة الرئيسيه ', callback_data="/add"},
 },
 {
-{text = '♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ ', url="t.me/SourceBaki"},
+{text = '♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ ', url="t.me/SourceBaki"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12307,7 +12321,7 @@ return false
 end
 local Teext =[[
 انت الان في قائمة تنبيه المعرف
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 الاوامر الخاصة فـي تنبيه المعرف
 تفعيل تنبيه المعرف
 تعطيل تنبيه المعرف
@@ -12324,7 +12338,7 @@ keyboard.inline_keyboard = {
 {text = ' القائمة الرئيسيه ', callback_data="/add"},
 },
 {
-{text = '♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ ', url="t.me/SourceBaki"},
+{text = '♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ ', url="t.me/SourceBaki"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12337,7 +12351,7 @@ return false
 end
 local Teext =[[
 انت الان في قائمة تنبيه الصور
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 الاوامر الخاصة فـي تنبيه الصور
 تفعيل تنبيه الصور
 تعطيل تنبيه الصور
@@ -12354,7 +12368,7 @@ keyboard.inline_keyboard = {
 {text = ' القائمة الرئيسيه ', callback_data="/add"},
 },
 {
-{text = '♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ ', url="t.me/SourceBaki"},
+{text = '♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ ', url="t.me/SourceBaki"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12368,13 +12382,13 @@ return false
 end
 local Teext =[[
 *اهلا انتツفي اضافات البوت*
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 * يمكنك معرفة حاله تفعيل الاضافات *
 * من خلال ارسال حاله الاضافات *
-♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫
+♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫
 *يمكنك تصفح الاضافات من خلال*
 *الكيبورد الموجود في الأسفل*
-[ ♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ ](t.me/SourceBaki)
+[ ♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ ](t.me/SourceBaki)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12385,7 +12399,7 @@ keyboard.inline_keyboard = {
 {text = 'تنبيه المعرف', callback_data="/change-id"},{text = 'تنبيه الصور', callback_data="/change-photo"},
 },
 {
-{text = '♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ ', url="t.me/SourceBaki"},
+{text = '♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫ ', url="t.me/SourceBaki"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12859,7 +12873,7 @@ local Text = [[
 ]]  
 keyboard = {}   
 keyboard.inline_keyboard = {  
-{{text = 'بہاكہيہ',url="t.me/Baki_Owner"}},  
+{{text = 'ツبہاكہيہ',url="t.me/Baki_Owner"}},  
 
 }  
 local msg_id = msg.id_/2097152/0.5  
@@ -12895,7 +12909,7 @@ ght = math.random(2,22);
 local Text ='تـم اخـتـيـآر  استـوري ممـيز لـك ❤️' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𓌹بہاكہيہ  𓌺',url="t.me/Baki_Owner"}}, 
+{{text = '𓌹ツبہاكہيہ  𓌺',url="t.me/Baki_Owner"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/koko12300/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13088,7 +13102,7 @@ end
 if #list == 0 then
 t = "♫︙ لا يوجد ادمن"
 end
-send(msg.chat_id_,0,''..t..'\n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n♫︙ تم التعديل على الميديا\n♫︙ الشخص الي قام بالتعديل\n♫︙ ايدي الشخص ◂ '..result.sender_user_id_..'\n♫︙ معرف الشخص»{ '..users..' }') 
+send(msg.chat_id_,0,''..t..'\n♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫\n♫︙ تم التعديل على الميديا\n♫︙ الشخص الي قام بالتعديل\n♫︙ ايدي الشخص ◂ '..result.sender_user_id_..'\n♫︙ معرف الشخص»{ '..users..' }') 
 end,nil)
 DeleteMessage(msg.chat_id_,{[0] = msg.message_id_}) 
 end
