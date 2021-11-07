@@ -16953,7 +16953,7 @@ keyboard.inline_keyboard = {
 {text = 'الامر السابق', callback_data="/help3"},
 },
 {
-{text = 'Back ♫, callback_data="/help8"},
+{text = 'Back ♫', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
