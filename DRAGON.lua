@@ -899,7 +899,7 @@ local keyboard = {
 {'تفعيل البوت الخدمي♫','تعطيل البوت الخدمي♫'},
 {'مسح المجموعـات♫','مسح المشتركين♫'},
 {'جلب نسخه الاحتياطيه♫'},
-{'تحديث السورس♫','الاصدار♫'},
+{'تحديث السورس','الاصدار'},
 {'معلومات السيرفر♫'},
 {'الغاء♫'},
 }
@@ -1091,7 +1091,7 @@ echo '*———————————~*\n♫✔{ مـده تـشغيـل ال
 ]]):read('*all'))  
 end
 
-if text == 'تحديث السورس♫' and DevSoFi(msg) then 
+if text == 'تحديث السورس' and DevSoFi(msg) then 
 os.execute('rm -rf DRAGON.lua')
 os.execute('wget https://raw.githubusercontent.com/Ahmed-Baki/BAKI/main/DRAGON.lua')
 send(msg.chat_id_, msg.id_,'♫︙ تم تحديث السورس \n♫︙ لديك اخر اصدار لسورس باكي\n♫︙ الاصدار » { v 1.6 }')
@@ -9171,40 +9171,82 @@ end
 return false
 end
 
-if text == "بوت" or text == 'يا بوت' then
-Namebot = (bot_data:get(ban_id..'Name:Bot') or 'باكي')
-local DRAGONE_Msg = { 
+if text == ""..(database:get(bot_id..'Name:Bot') or 'باكي').."" or text == 'بوت' or text'يا بوت' then  
+Namebot = (database:get(bot_id..'Name:Bot') or 'باكي')
+local DRAGON_Msg = {
+'نعم يروحي♥️🙈',
+'نعم يا قلب  '..Namebot..'',
+'عاوز اي من '..Namebot..'',
+'دوختو  '..Namebot..'',
+'انت تعرف انو بوت  '..Namebot..'  متنصب علي سورس تريفور🙈♥️',
+'بتشقط وجي ويت 🤪',
+'ايوا جاي 🙈',
+'يعم هتسحر واجي 😾',
+'طب متصلي على النبي كدا 🙂💜',
+'تع اشرب شاي 🥺💙',
+'دوس على الخوخه 🍑',
+'متيجي 😉',
+'ياض خش نام 😂',
+'انا '..Namebot..' احسن البوتات 🤩♥️',
+'نعم'
+} 
+Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
+local msg_id = msg.id_/2097152/0.5  
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'اضف البوت الي مجموعتك √' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
+{
+{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼' ,url="t.me/SourceBaki"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end
+if text == "بوت" then
+local Namebot = (database:get(bot_id..'Name:Bot') or 'باكي') 
+local DRAGON_Msg = { 
 'اسمي  '..Namebot..' يا قلبي 🤤💚',
 'اسمي '..Namebot..' يا روحي🙈❤️',
-'اسمي  '..Namebot..' يعمري🌚🌹',
+'اسمي  '..Namebot..' يعمري♥️',
 'اسمي  '..Namebot..' يا قمر 🐭🤍',
-'اسمي  '..Namebot..' يامزه ??❤️',
+'اسمي  '..Namebot..' يامزه 🥺❤️',
 'اسمي  '..Namebot..' يعم 😒',
 'مقولت اسمي '..Namebot..' في اي 🙄',
 'اسمي الكيوت '..Namebot..' 🌝💘',
 'اسمي  '..Namebot..' ياحياتي🧸♥️',
 'اسمي  '..Namebot..' يوتكه🙈🍑',
+'انت تعرف انو بوت  '..Namebot..'  متنصب علي سورس تريفور🙈♥️',
 } 
 Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
-local msg_id = msg.id_/2097152/0.5 
-local texxtt = ''..Namebot..''
+local msg_id = msg.id_/2097152/0.5  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = texxtt, url="t.me/"..dofile("./Info.lua").botUserName.."?start"},
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'اضغط لاضافه البوت لمجموعتك☑️ ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
+{text = 'اضف البوت الي مجموعتك √' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
+{
+{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼' ,url="t.me/SourceBaki"},
 },
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'& photo=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else 
 send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
 end 
 end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 
 if text and text:match("^باكي$") or text and text:match("^بقدونس$") then
