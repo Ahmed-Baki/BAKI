@@ -7,7 +7,7 @@ if text then
 list = {'صباح الخير'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[انت الخير ياعمري..❤️](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[انت الخير ياعمري..❤️](t.me/SourceBaki)') 
 return false
 end
 end
@@ -17,7 +17,7 @@ if text then
 list = {'جيت'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[لف وارجع تانيي مش حوارر😂💃](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[لف وارجع تانيي مش حوارر😂💃](t.me/SourceBaki)') 
 return false
 end
 end
@@ -29,7 +29,7 @@ if text then
 list = {'🌚'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[القمر ده شبهك..🙂♥️](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[القمر ده شبهك..🙂♥️](t.me/SourceBaki)') 
 return false
 end
 end
@@ -39,7 +39,7 @@ if text then
 list = {'هموت'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[وتسبني لمين طيب..🥺💔](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[وتسبني لمين طيب..🥺💔](t.me/SourceBaki)') 
 return false
 end
 end
@@ -50,7 +50,7 @@ if text then
 list = {'زعلان'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[عادي يتفلق هنعملو اي..😒💔](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[عادي يتفلق هنعملو اي..😒💔](t.me/SourceBaki)') 
 return false
 end
 end
@@ -61,30 +61,26 @@ if text then
 list = {'حصل'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[حصل حصوله..😹💜](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[حصل حصوله..😹💜](t.me/SourceBaki)') 
 return false
 end
 end
 end
 
 
-if text == 'ليجاند' then 
-send(msg.chat_id_,msg.id_, '[مطوري حبيبي..🥺💜](t.me/Ziko090)') 
-return false
-end
 
 if text == 'طاسه' then
-send(msg.chat_id_,msg.id_, '[امك حلوة وابوك ورقاصة😂💃🏻](t.me/Ziko090)')
+send(msg.chat_id_,msg.id_, '[امك حلوة وابوك ورقاصة😂💃🏻](t.me/SourceBaki)')
 return false
 end
 
 if text == 'انا مين' then 
-send(msg.chat_id_,msg.id_, '[نت احلى حاجه فحياتي ❤️🍃](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[نت احلى حاجه فحياتي ❤️🍃](t.me/SourceBaki)') 
 return false
 end
 
 if text == 'صلي علي النبي' then 
-send(msg.chat_id_,msg.id_, '[عليه الصلاه والسلام..♥️🙂](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[عليه الصلاه والسلام..♥️🙂](t.me/SourceBaki)') 
 return false
 end
 
@@ -95,12 +91,17 @@ end
 
 
 if text == 'سلام' then 
-send(msg.chat_id_,msg.id_, '[ابق تعاله كليوم..😹💔🎶](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[ابق تعاله كليوم..😹💔🎶](t.me/SourceBaki)') 
+return false
+end
+
+if text == 'خرا' then 
+send(msg.chat_id_,msg.id_, '[عليك..😹💔🎶](t.me/SourceBaki)') 
 return false
 end
 
 if text == 'هاي' or text == 'هيي' then
-send(msg.chat_id_,msg.id_, '[علي الواي فاي..😺💜](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[علي الواي فاي..😺💜](t.me/SourceBaki)') 
 return false
 end
 
@@ -108,7 +109,7 @@ if text then
 list = {'برايفت'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[خدوني معاكم برايفت والنبي..🥺💜](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[خدوني معاكم برايفت والنبي..🥺💜](t.me/SourceBaki)') 
 return false
 end
 end
@@ -118,7 +119,7 @@ if text then
 list = {'علي النبي'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[عليه الصلاه والسلام..💛🙂](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[عليه الصلاه والسلام..💛🙂](t.me/SourceBaki)') 
 return false
 end
 end
@@ -138,7 +139,7 @@ if text then
 list = {'🙄'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[نزل عينك عيب كده..🌚♥️](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[نزل عينك عيب كده..🌚♥️](t.me/SourceBaki)') 
 return false
 end
 end
@@ -157,7 +158,7 @@ end
 --fgf
 if text == "حلوه"  or text == "حلو" then
 
-send(msg.chat_id_,msg.id_, '[يحلات عيونك..♥️🦋](t.me/Ziko090)')
+send(msg.chat_id_,msg.id_, '[يحلات عيونك..♥️🦋](t.me/SourceBaki)')
 return false
 end
 
@@ -165,7 +166,7 @@ if text then
 list = {'💋'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[عايز من ده..💋🥀](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[عايز من ده..💋🥀](t.me/SourceBaki)') 
 return false
 end
 end
@@ -175,7 +176,7 @@ if text then
 list = {'ب ف'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[خدوني معاكم بف..🙄💔](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[خدوني معاكم بف..🙄💔](t.me/SourceBaki)') 
 return false
 end
 end
@@ -185,7 +186,7 @@ if text then
 list = {'😔'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[متزعلش بحبك..😥♥️](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[متزعلش بحبك..😥♥️](t.me/SourceBaki)') 
 return false
 end
 end
@@ -195,7 +196,7 @@ if text then
 list = {'سلام عليكم'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[وعليكم السلام ..🖤🌚](t.me/Ziko090)') 
+send(msg.chat_id_,msg.id_, '[وعليكم السلام ..🖤🌚](t.me/SourceBaki)') 
 return false
 end
 end
@@ -204,20 +205,15 @@ end
 --tt
 if text == "بحبك"  or text == "بتحبني" then
 
-send(msg.chat_id_,msg.id_, '[بعشقك ياروحي..🤗💜](t.me/Ziko090)')
+send(msg.chat_id_,msg.id_, '[بعشقك ياروحي..🤗💜](t.me/SourceBaki)')
 return false
 end
 
--- TOP
-if text == "بلاك" or text == "بلاك هوس" or text == "black" or text == "black house" then
 
-send(msg.chat_id_,msg.id_, '[ مالك السورس](t.me/ms_b_h)') 
-return false
-end
 
 --Mahmoud
-if text == "صاحب السورس" or text == "مبرمج السورس" or text == "مالك السورس" or text == "ليجاند" then
-send(msg.chat_id_,msg.id_, '[زيكو القمد♥️](t.me/Zikoo9)') 
+if text == "صاحب السورس" or text == "مالك السورس" then
+send(msg.chat_id_,msg.id_, '[باكي♥️](t.me/Baki_Owner)') 
 return false
 end
 
@@ -231,14 +227,14 @@ end
 --test
 if text == "القناة"  or text == "القناه" then
 
-send(msg.chat_id_,msg.id_, '[اضغط هنا وانضم للقناه](t.me/Ziko090)')
+send(msg.chat_id_,msg.id_, '[اضغط هنا وانضم للقناه](t.me/SourceBaki)')
 return false
 end
 
 --yy
 if text == "ادمنتك" or text == "بعشقك" then
 
-send(msg.chat_id_, msg.id_,  '[بموت فيك ياقمري..😻♥️](t.me/Ziko090)') 
+send(msg.chat_id_, msg.id_,  '[بموت فيك ياقمري..😻♥️](t.me/SourceBaki)') 
 return false 
 end
 
@@ -246,7 +242,7 @@ end
 --gh
 if text == "باي" then
 
-send(msg.chat_id_, msg.id_,  '[باي ياروحي..🌚💜](t.me/Ziko090)') 
+send(msg.chat_id_, msg.id_,  '[باي ياروحي..🌚💜](t.me/SourceBaki)') 
 return false 
 end
 
@@ -257,30 +253,16 @@ send(msg.chat_id_, msg.id_,  'اكتب  :->  زخرفه + الاسم المرا�
 return false 
 end
 
---Nageh
-if text == "وةو" or text == "ةوة" or text == "ي تنت" or text == "كطةك" or text == "ةموة" or text == "كجطح" or text == "رزو" then
-local LEADER_Msg = {
-"اي ي قلب ناجح ❤️ \n @N2GEH",
-"اؤمرني حبيبي 😂 \n @N2GEH",
-"ايش فيه يا زلمه؟ \n @N2GEH",
-"طلباتك اوامر ايش بتريد 🖤 \n @N2GEH",
-"شبيك لبيك ناجح بين ايديك 😂 \n @N2GEH",
-"المطور مشغول الآن 😌 \n @N2GEH"
-}
-send(msg.chat_id_, msg.id_,'['..LEADER_Msg[math.random(#LEADER_Msg)]..']') 
-return false
-end
-
 
 --7ODA
-if text == "ةمحت" or text == "يخك" or text == "ةمنج" or text == "ةمكم" or text == "جططج" or text == "كطجك" or text == "mahmoud" then
+if text == "باكي" or text == "بقدونس" then
 local LEADER_Msg = {
-"اي ي قلب حودا ❤️ \n @MahmoudM2",
-"مش فاضي والله 😂 \n @MahmoudM2",
-"عاوز اي يابا؟ \n @MahmoudM2",
-"نعمين 🙂😹 🖤 \n @MahmoudM2",
-"فكك مني بقاا 😹 \n @MahmoudM2",
-"المطور مشغول الآن 😌 \n @MahmoudM2"
+"اي ي قلب باكي ❤️ \n @Baki_Owner",
+"مش فاضي والله 😂 \n @Baki_Owner",
+"عاوز اي يابا؟ \n @Baki_Owner",
+"نعمين 🙂😹 🖤 \n @Baki_Owner",
+"فكك مني بقاا 😹 \n @Baki_Owner",
+"المطور مشغول الآن 😌 \n @Baki_Owner"
 }
 send(msg.chat_id_, msg.id_,'['..LEADER_Msg[math.random(#LEADER_Msg)]..']') 
 return false
