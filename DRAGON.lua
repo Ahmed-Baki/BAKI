@@ -12865,7 +12865,7 @@ send(msg.chat_id_, msg.id_,xl)
 database:del(bot_id..":"..msg.sender_user_id_..":rkko_Bots"..msg.chat_id_)
 end
 
-if text == 'باكي' or text == 'بہاكہيہ' then  or text == 'بقدونس'
+if text == 'باكي' or text == 'بہاكہيہ' or text == 'بقدونس' then
 local Text = [[  
 ♫ مــبـرمج الســورس  ♫
 ]]  
@@ -12878,8 +12878,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Baki_Owner&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == '𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼
-𝑡ℎ𝑒 𝑑𝑒𝑒𝑝 𝑠𝑜𝑢𝑟𝑐𝑒 𝑖𝑛 𝑡𝑒𝑙𝑒𝑔𝑟𝑎𝑚' or text == 'مكفهر' then  
+if text == 'مكفهر' or text == 'ai]' then 
 local Text = [[  
 ♫ THE GREAT WRITER ♫
 ]]  
@@ -12891,7 +12890,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Mokfhxx&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'كتابات' or text == 'قناه' then  
+if text == 'كتابات' or text == 'حكم' then  
 local Text = [[  
 افضل قناه للكتابات
 ]]  
