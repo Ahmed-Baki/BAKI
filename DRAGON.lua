@@ -882,12 +882,12 @@ end
 if DevSoFi(msg) then
 local bl = '♫︙ اهلا عزيزي آلمـطـور\n♫︙ آنت آلمـطـور آلآسـآسـي للبوت\n┉  ┉  ┉  ┉  ┉  ┉  ┉  ┉ء\n♫︙ تسـتطـيع‌‏ آلتحگم باوامر البوت\n♫︙ من خلاال الكيبورد خاص بك\n♫︙ قناة سورس البوت [اضغط هنا](t.me/SourceBaki)'
 local keyboard = {
+{'♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫'},
+{'بہاكہيہ'},
+{'♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫'},
 {'♫ الاحصائيات ♫'},
 {'تعطيل التواصل♫','تفعيل التواصل♫'},
 {'ضع اسم للبوت♫','قائمه العام♫','قائمه الكتم العام♫'},
-{'♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫'},
-{'مـبـرمــج الـسورس'},
-{'♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫'},
 {'المطورين♫','الثانويين♫'},
 {'المشتركين♫','المجموعـات♫'},
 {'تغير رساله الاشتراك','حذف رساله الاشتراك♫','تغير الاشتراك'},
@@ -2680,14 +2680,13 @@ end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then  
 local Text = [[  
 ╭━━━❲☆━━━━━☆❳━━━╮
-[𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙱𝙰𝙺𝙸](t.me/SourceBaki)
-[𝚝𝚑𝚎 𝚍𝚎𝚎𝚙 𝚜𝚘𝚞𝚛𝚌𝚎](t.me/SourceBaki)
-[𝚒𝚗 𝚝𝚎𝚕𝚎𝚐𝚛𝚊𝚖](t.me/SourceBaki)
+[𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼](t.me/SourceBaki)
+[𝑡ℎ𝑒 𝑑𝑒𝑒𝑝 𝑠𝑜𝑢𝑟𝑐𝑒 𝑖𝑛 𝑡𝑒𝑙𝑒𝑔𝑟𝑎𝑚](t.me/SourceBaki)
 ╰━━━❲☆━━━━━☆❳━━━╯
 ]]  
 keyboard = {}   
 keyboard.inline_keyboard = {  
-{{text = ' ツツبہاكہيہ', url="https://t.me/Baki_Owner"}},  
+{{text = ' ツبہاكہيہ', url="https://t.me/Baki_Owner"}},  
 {{text = ' 𝐵𝐴𝑅 𝐵𝐴𝐾𝐼 ',url="https://t.me/HelpBaki"}},
 {{text = 'فــواصــل🌿❤️',url="https://t.me/mokfhr"}},
 {{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙱𝙰𝙺𝙸', url="https://t.me/SourceBaki"}},  
@@ -11472,7 +11471,6 @@ end
 return false
 end
 local Text =[[
-*اهلا انتツفي اضافات البوت*
 *♫━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━♫*
 * يمكنك معرفة حاله تفعيل الاضافات *
 * من خلال ارسال حاله الاضافات *
@@ -12867,7 +12865,7 @@ send(msg.chat_id_, msg.id_,xl)
 database:del(bot_id..":"..msg.sender_user_id_..":rkko_Bots"..msg.chat_id_)
 end
 
-if text == 'باكي' then  
+if text == 'باكي' or text == 'بہاكہيہ' then  or text == 'بقدونس'
 local Text = [[  
 ♫ مــبـرمج الســورس  ♫
 ]]  
@@ -12880,13 +12878,26 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Baki_Owner&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'شهد' or text == 'مكفهر' then  
+if text == '𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼
+𝑡ℎ𝑒 𝑑𝑒𝑒𝑝 𝑠𝑜𝑢𝑟𝑐𝑒 𝑖𝑛 𝑡𝑒𝑙𝑒𝑔𝑟𝑎𝑚' or text == 'مكفهر' then  
 local Text = [[  
-♫ ست الكل ♫
+♫ THE GREAT WRITER ♫
 ]]  
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {{text = 'مہكہفہهر',url="t.me/Mokfhxx"}},  
+}  
+local msg_id = msg.id_/2097152/0.5  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Mokfhxx&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'كتابات' or text == 'قناه' then  
+local Text = [[  
+افضل قناه للكتابات
+]]  
+keyboard = {}   
+keyboard.inline_keyboard = {  
+{{text = 'فــواصــل🌿❤️',url="t.me/mokfhr"}},  
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Mokfhxx&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
