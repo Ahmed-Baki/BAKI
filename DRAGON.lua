@@ -10879,13 +10879,13 @@ if text and text:match("^زخرفه (.*)$") and database:get(bot_id.." sofi:zhrf
 local TextZhrfa = text:match("^زخرفه (.*)$")
 zh = https.request('https://apiabs.ml/zrf.php?abs='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
-t = "\n ♫ائمه الزخرفه \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
+t = "\n قائمة الزخرفه \n♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫\n"
 i = 0
 for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  `"..v.."` \n"
 end
-send(msg.chat_id_, msg.id_, t..'♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫'\n'اضغط علي الاسم ليتم نسخه'\n'♫━━━❲☆ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼 ☆❳━━━♫ٴ'\n '♫❲[《SOURCE BAKI》 ](t.me/SourceBaki)❳ ♫♫')
+send(msg.chat_id_, msg.id_, t..'اضغط على الاسم ليتم نسخه')
 end
 if text == "ضع رابط" or text == 'وضع رابط' then
 if msg.reply_to_message_id_ == 0  and Mod(msg) then  
