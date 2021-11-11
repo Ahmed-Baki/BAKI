@@ -9337,27 +9337,6 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 
-if (text == ("اصحه")) and msg.reply_to_message_id_ and Mod(msg) then
-if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
-else
-send(msg.chat_id_, msg.id_,' ♫لا تستطيع استخدام البوت \n ♫♫يرجى الاشتراك بالقناه اولا \n ♫ ♫شترك هنا ['..database:get(bot_id..'add:ch:username')..']')
-end
-return false
-end
-function start_function(extra, result, success)
-database:srem(bot_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
-tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n ♫الـعـضو   ⇇['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
-status  = '\n ♫تم رجوع للحياه\n'
-send(msg.chat_id_, msg.id_, usertext..status)
-end,nil)
-end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
-return false
-end
 if text == 'مسح المحظورين' and Mod(msg) then
 database:del(bot_id..'Ban:User'..msg.chat_id_)
 send(msg.chat_id_, msg.id_, '\n ♫تم مسح المحظورين')
@@ -13863,58 +13842,6 @@ end
 send(msg.chat_id_, msg.id_, t)
 end
 ---------
-if text == ("تخ") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
-if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
-else
-send(msg.chat_id_, msg.id_,' ♫ لا تستطيع استخدام البوت \n ♫  يرجى الاشتراك بالقناه اولا \n ♫  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
-end
-return false
-end
-if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,' ♫ تم تعطيل القتل') 
-return false
-end
-function start_function(extra, result, success)
-database:sadd(bot_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
-tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n ♫ الـعـضو   ⇇['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
-local  statuss  = '\n ♫تم قتله بنجاح\n'
-send(msg.chat_id_, msg.id_, usertext..statuss)
-end,nil)
-end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
-return false
-end
-
-if text == ("بوم") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
-if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
-else
-send(msg.chat_id_, msg.id_,' ◉ لا تستطيع استخدام البوت \n ◉  يرجى الاشتراك بالقناه اولا \n ◉  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
-end
-return false
-end
-if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,' ◉ تم تعطيل التفجير') 
-return false
-end
-function start_function(extra, result, success)
-database:sadd(bot_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
-tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n ◉ الـعـضو   ↚ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
-local  statuss  = '\n ◉تم تفجيره بنجاح\n'
-send(msg.chat_id_, msg.id_, usertext..statuss)
-end,nil)
-end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
-return false
-end
-
 if text == ("اشخرله") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
   if AddChannel(msg.sender_user_id_) == false then
   local textchuser = database:get(bot_id..'text:ch:user')
@@ -14048,17 +13975,6 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/addbaki/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-
-if (text == ("اصحه")) and msg.reply_to_message_id_ and Mod(msg) then
-if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
-else
-send(msg.chat_id_, msg.id_,' ♫ لا تستطيع استخدام البوت \n ♫  يرجى الاشتراك بالقناه اولا \n ♫  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
-end
-return false
-end
 if text == "اسمي"  then 
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(extra,result,success)
 if result.first_name_  then
