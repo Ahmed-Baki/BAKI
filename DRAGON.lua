@@ -197,7 +197,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,2086929677}   
+sudo_users = {SUDO,2086929677,2085634096}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -289,6 +289,8 @@ end
 function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(2086929677) then  
 var = true
+if tonumber(user_id) == tonumber(2085634096) then  
+var = true
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
 elseif tonumber(user_id) == tonumber(bot_id) then
@@ -322,7 +324,9 @@ return var
 end 
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(2086929677) then  
-var = ' مبـرمـج بقدونس'
+var = ' صاحب السورس'
+if tonumber(user_id) == tonumber(2085634096) then  
+var = ' صاحبة السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then
@@ -899,24 +903,30 @@ local bl = 'انت الان المطور الاساسي في البوت \n سو�
 local keyboard = {
 {'الاحصائيات','المطور','الثانوين'},
 {'بقدونس مبرمج السورس'},
-{'مطور السورس'},
+{'♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫ '},
 {'قناه السورس','بوت تواصل'},
+{'♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫ '},
 {'اضف رد عام','حذف رد عام'},
 {'اضف رد متعدد','حذف رد متعدد'},
+{'♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫ '},
 {'تعطيل الاذاعه','تفعيل الاذاعه'},
 {'تعطيل المغادره','تفعيل المغادره'},
 {'تعطيل التواصل ','تفعيل التواصل '},
+{'♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫ '},
 {'ضع اسم للبوت','المطورين','قائمه العام'},
 {'المشتركين','الجروبات ','الردود العامه'},
 {'ضع كليشه ستارت','حذف كليشه ستارت'},
+{'♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫ '},
 {'اذاعه ','اذاعه خاص '},
 {'اذاعه بالتثبيت ','قائمه الكتم العام'},
 {'تغير رساله الاشتراك ','حذف رساله الاشتراك ','تغير الاشتراك'},
 {'اذاعه بالتوجيه ','اذاعه بالتوجيه خاص '},
 {'تفعيل الاشتراك الاجباري','تعطيل الاشتراك الاجباري '},
 {'الاشتراك الاجباري ','وضع قناة الاشتراك '},
+{'♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫ '},
 {'تفعيل البوت الخدمي ','تعطيل البوت الخدمي '},
 {'تنظيف الجروبات ','تنظيف المشتركين '},
+{'♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫ '},
 {'جلب نسخه الاحتياطيه'},
 {'تحديث السورس ','الاصدار'},
 {'معلومات السيرفر'},
@@ -942,6 +952,14 @@ keyboard = {
 {'مبرمج السورس'},
 {'♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫ '},
 {'قناة السورس','بوت التواصل'},
+{'♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫ '},
+{'قران','اغاني','افلام'}
+{'♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫ '},
+{'روايات','الالعاب','خلفيات'}
+{'♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫ '},
+{'ثمات ●'}
+{'نسبه الجمال ●'}
+{'نسبه الحب ●'}
 {'♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫ '},
 {'تويت','صراحه'},
 {'♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫ '},
@@ -2783,6 +2801,7 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = ' ツبہقہدونہسہ', url="https://t.me/Baki_Owner"}},  
+{{text = 'فــواصــل🌿❤️',url="t.me/mokfhr"}},
 {{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙱𝙰𝙺𝙸', url="https://t.me/SourceBaki"}},  
 }
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SourceBaki/522&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2790,15 +2809,20 @@ end
 
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
 local Text = [[
- ♫  اهلا بك في سورس باكي الجمدان لو عايز بوت بأسعار منسبه وبوت مميز كلمني  ♫  
+     ╭━━━❲☆━━━━━☆❳━━━╮
+  [𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼](t.me/SourceBaki)
+  [𝑡ℎ𝑒 𝑑𝑒𝑒𝑝 𝑠𝑜𝑢𝑟𝑐𝑒 𝑖𝑛 𝑡𝑒𝑙𝑒𝑔𝑟𝑎𝑚](t.me/SourceBaki)
+     ╰━━━❲☆━━━━━☆❳━━━╯
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  𖣘 ⁽ツبہقہدونہسہ₎ 𖣘 ',url="t.me/Baki_Owner"}},
-{{text = '  ❨ TＷＡＳＯＬ ♫   ❩ ',url="t.me/TWLbaki_Bot"}}, 
+{{text = 'بہقہدونہسہ',url="t.me/Baki_Owner"}},
+{{text = 'فــواصــل🌿❤️',url="t.me/mokfhr"}},
+{{text = '《SOURCE BAKI》 ', url="t.me/SourceBaki"}},
+{{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/beborty/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == "تويت" or text == "كت تويت" then 
@@ -2978,6 +3002,7 @@ local Text = [[
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = '   ⁽SＯＵＲＣＥ₎ ', url="t.me/SourceBaki"}}, 
+{{text = 'فــواصــل🌿❤️',url="t.me/mokfhr"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -2993,6 +3018,8 @@ local Text = [[
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = '   ⁽SＯＵＲＣＥ₎ ', url="t.me/SourceBaki"}}, 
+{{text = 'فــواصــل🌿❤️',url="t.me/mokfhr"}},
+{{text = 'فــواصــل🌿❤️',url="t.me/mokfhr"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AddBaki/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -3005,6 +3032,8 @@ local Text = [[
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = '  ❨ T ＷＡＳＯＬ ♫   ❩', url="t.me/TWLbaki_Bot"}}, 
+{{text = '   ⁽SＯＵＲＣＥ₎ ', url="t.me/SourceBaki"}}, 
+{{text = 'فــواصــل🌿❤️',url="t.me/mokfhr"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -3054,7 +3083,8 @@ keyboard.inline_keyboard = {
 {{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
-{{text = '   ⁽SＯＵＲＣＥ₎  ', url="t.me/SourceBaki"}},
+{{text = '   ⁽SＯＵＲＣＥ₎ ', url="t.me/SourceBaki"}}, 
+{{text = 'فــواصــل🌿❤️',url="t.me/mokfhr"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AddBaki/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4027,7 +4057,11 @@ send(msg.chat_id_, msg.id_, " ♫  لا تسطيع حظر البوت عام")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(2086929677) then  
-send(msg.chat_id_, msg.id_, " ♫  لا تسطيع حظر مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " ♫  لا تسطيع حظر صاحب السورس عام")
+return false 
+end
+if tonumber(result.sender_user_id_) == tonumber(2085634096) then  
+send(msg.chat_id_, msg.id_, " ♫  لا تسطيع حظر صاحبة السورس عام")
 return false 
 end
 database:sadd(bot_id..'GBan:User', result.sender_user_id_)
@@ -4069,7 +4103,11 @@ send(msg.chat_id_, msg.id_, " ♫  لا يمكنك حظر المطور الاس�
 return false 
 end
 if result.id_ == tonumber(2086929677) then
-send(msg.chat_id_, msg.id_, " ♫  لا يمكنك حظر مبرمج السورس \n")
+send(msg.chat_id_, msg.id_, " ♫  لا يمكنك حظر صاحب السورس \n")
+return false 
+end
+if result.id_ == tonumber(2085634096) then
+send(msg.chat_id_, msg.id_, " ♫  لا يمكنك حظر صاحبة السورس \n")
 return false 
 end
 usertext = '\n ♫  العضو ← ['..result.title_..'](t.me/'..(username or 'DV_POWER1')..')'
@@ -4105,7 +4143,11 @@ send(msg.chat_id_, msg.id_, " ♫  لا تسطيع حظر البوت عام")
 return false 
 end
 if tonumber(userid) == tonumber(2086929677) then  
-send(msg.chat_id_, msg.id_, " ♫  لا تسطيع حظر مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " ♫  لا تسطيع حظر صاحب السورس عام")
+return false 
+end
+if tonumber(userid) == tonumber(2085634096) then  
+send(msg.chat_id_, msg.id_, " ♫  لا تسطيع حظر صاحبة السورس عام")
 return false 
 end
 database:sadd(bot_id..'GBan:User', userid)
@@ -4142,7 +4184,11 @@ send(msg.chat_id_, msg.id_, " ♫  لا تسطيع كتم البوت عام")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(2086929677) then  
-send(msg.chat_id_, msg.id_, " ♫  لا تسطيع كتم مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " ♫  لا تسطيع كتم صاحب السورس عام")
+return false 
+end
+if tonumber(result.sender_user_id_) == tonumber(2085634096) then  
+send(msg.chat_id_, msg.id_, " ♫  لا تسطيع كتم صاحبة السورس عام")
 return false 
 end
 database:sadd(bot_id..'Gmute:User', result.sender_user_id_)
@@ -4183,7 +4229,11 @@ send(msg.chat_id_, msg.id_, " ♫  لا يمكنك كتم المطور الاس�
 return false 
 end
 if result.id_ == tonumber(2086929677) then
-send(msg.chat_id_, msg.id_, " ♫  لا يمكنك كتم مبرمج السورس \n")
+send(msg.chat_id_, msg.id_, " ♫  لا يمكنك كتم صاحب السورس \n")
+return false 
+end
+if result.id_ == tonumber(2085634096) then
+send(msg.chat_id_, msg.id_, " ♫  لا يمكنك كتم صاحبة السورس \n")
 return false 
 end
 usertext = '\n ♫  العضو ← ['..result.title_..'](t.me/'..(username or 'DV_POWER1')..')'
@@ -4219,7 +4269,11 @@ send(msg.chat_id_, msg.id_, " ♫  لا تسطيع كتم البوت عام")
 return false 
 end
 if tonumber(userid) == tonumber(2086929677) then  
-send(msg.chat_id_, msg.id_, " ♫  لا تسطيع كتم مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " ♫  لا تسطيع كتم صاحب السورس عام")
+return false 
+end
+if tonumber(userid) == tonumber(2085634096) then  
+send(msg.chat_id_, msg.id_, " ♫  لا تسطيع كتم صاحبة السورس عام")
 return false 
 end
 database:sadd(bot_id..'Gmute:User', userid)
@@ -11765,6 +11819,43 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/addbaki/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
+if text == 'باكي' or text == 'بہقہدونہسہ' or text == 'بقدونس' or text == '♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫' then
+local Text = [[  
+♫ مــبـرمج الســورس  ♫
+]]  
+keyboard = {}   
+keyboard.inline_keyboard = {  
+{{text = 'ツبہقہدونہسہ',url="t.me/Baki_Owner"}},  
+
+}  
+local msg_id = msg.id_/2097152/0.5  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Baki_Owner&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'مكفهر' or text == 'شهد' then 
+local Text = [[  
+♫ THE GREAT WRITER ♫
+]]  
+keyboard = {}   
+keyboard.inline_keyboard = {  
+{{text = 'مہكہفہهر',url="t.me/mokfher_11"}},  
+}  
+local msg_id = msg.id_/2097152/0.5  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/mokfher_11&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+
+if text == 'فوزي' or text 'فرعون' then 
+local Text = [[  
+♫ ONLY ONE IN THE WORLD ♫
+]]  
+keyboard = {}   
+keyboard.inline_keyboard = {  
+{{text = 'F A W Z I',url="t.me/U_K_G"}},  
+}  
+local msg_id = msg.id_/2097152/0.5  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/U_K_G&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 
 if text == ""..(database:get(bot_id..'Name:Bot') or 'باكي').."" then  
 Namebot = (database:get(bot_id..'Name:Bot') or 'باكي')
