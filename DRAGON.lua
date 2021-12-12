@@ -5591,6 +5591,75 @@ database:del(bot_id.."Dev:SoFi:2")
 send(msg.chat_id_, msg.id_, "\n♫  تم مسح قائمة المطورين الثانوين  ")
 end
 ------------------------------------------------------------------------
+if text and text:match("^all (.*)$") or text:match("^@all (.*)$") and CoSu(msg) then 
+local ttag = text:match("^all (.*)$") or text:match("^@all (.*)$") 
+if not database:get(bot_id..'Cick:all'..msg.chat_id_) then 
+if database:get(bot_id.."S00F4:all:Time"..msg.chat_id_..':'..msg.sender_user_id_) then   
+return  
+send(msg.chat_id_, msg.id_,"يرجى الاشتراك في اعظم قناه للكتابات :\n t.me/mokfhr") 
+end 
+database:setex(bot_id..'S00F4:all:Time'..msg.chat_id_..':'..msg.sender_user_id_,300,true) 
+tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(argg,dataa)  
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = dataa.member_count_},function(ta,sofi) 
+x = 0 
+tags = 0 
+local list = sofi.members_ 
+for k, v in pairs(list) do 
+tdcli_function({ID="GetUser",user_id_ = v.user_id_},function(arg,data) 
+if x == 5 or x == tags or k == 0 then 
+tags = x + 5 
+t = "#all "..ttag.."" 
+end 
+x = x + 1 
+tagname = data.first_name_ 
+tagname = tagname:gsub("]","") 
+tagname = tagname:gsub("[[]","") 
+t = t..", ["..tagname.."](tg://user?id="..v.user_id_..")" 
+if x == 5 or x == tags or k == 0 then 
+local Text = t:gsub('#all '..ttag..',','#all '..ttag..'\n') 
+sendText(msg.chat_id_,Text,0,'md') 
+end 
+end,nil) 
+end 
+end,nil) 
+end,nil) 
+end 
+end
+
+if text == "تاك للكل"  and CoSu(msg) then
+if not database:get(bot_id..'Cick:all'..msg.chat_id_) then
+if database:get(bot_id.."S00F4:all:Time"..msg.chat_id_..':'..msg.sender_user_id_) then  
+return 
+send(msg.chat_id_, msg.id_,"يرجى الاشتراك في اعظم قناه للكتابات :\n t.me/mokfhr")
+end
+database:setex(bot_id..'S00F4:all:Time'..msg.chat_id_..':'..msg.sender_user_id_,300,true)
+tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(argg,dataa) 
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = dataa.member_count_},function(ta,sofi)
+x = 0
+tags = 0
+local list = sofi.members_
+for k, v in pairs(list) do
+tdcli_function({ID="GetUser",user_id_ = v.user_id_},function(arg,data)
+if x == 5 or x == tags or k == 0 then
+tags = x + 5
+t = "#all"
+end
+x = x + 1
+tagname = data.first_name_
+tagname = tagname:gsub("]","")
+tagname = tagname:gsub("[[]","")
+t = t..", ["..tagname.."](tg://user?id="..v.user_id_..")"
+if x == 5 or x == tags or k == 0 then
+local Text = t:gsub('#all,','#all\n')
+sendText(msg.chat_id_,Text,0,'md')
+end
+end,nil)
+end
+end,nil)
+end,nil)
+end
+end
+------------------------------------------------------------------------
 if text ==("رفع الادمنيه") and Manager(msg) then
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data) 
 local num2 = 0
@@ -11878,13 +11947,12 @@ local DRAGON_Msg = {
 send(msg.chat_id_, msg.id_,'['..DRAGON_Msg[math.random(#DRAGON_Msg)]..']') 
 return false
 end
-if text == "بوت" then  
-local msg_id = msg.id_/2097152/0.5
-Namebot = (database:get(bot_id..'Name:Bot') or 'باكي')
-local DRAGON_Msg = {
+if text == "بوت" then
+local Namebot = (database:get(bot_id..'Name:Bot') or 'باكي') 
+local DRAGON_Msg = { 
 'اسمي  '..Namebot..' يا قلبي 🤤💚',
 'اسمي '..Namebot..' يا روحي🙈❤️',
-'اسمي  '..Namebot..' يعمري🌚🌹',
+'اسمي  '..Namebot..' يعمري♥️',
 'اسمي  '..Namebot..' يا قمر 🐭🤍',
 'اسمي  '..Namebot..' يامزه 🥺❤️',
 'اسمي  '..Namebot..' يعم 😒',
@@ -11892,23 +11960,26 @@ local DRAGON_Msg = {
 'اسمي الكيوت '..Namebot..' 🌝💘',
 'اسمي  '..Namebot..' ياحياتي🧸♥️',
 'اسمي  '..Namebot..' يوتكه🙈🍑',
-'انا '..Namebot..' إلى عمرو مهاب كابوس الكلاب ♫ ',
-}
-local Text = [[
- ]]..DRAGON_Msg[math.random(#DRAGON_Msg)]..[[ 
- 
-]]
-
- us = dofile("./vvvvvvInfo.lua").botUserName
- agwa = dofile("./vvvvvvInfo.lua").UserName
- agwa = agwa:gsub("%@", "")
+} 
+Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
+local msg_id = msg.id_/2097152/0.5  
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  مطور البوت ☆ ',url="t.me/"..agwa}},
-{{text = '  اضف البوت الي مجموعتك ☆ ',url="t.me/"..us.."?startgroup=start"}},
+{
+{text = 'الـمـطـور ↯', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..us..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-return false
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 
 if text == "اسمي"  then 
