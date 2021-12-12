@@ -11887,6 +11887,83 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/addbaki/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
+if text == 'حبك' or text == 'حبك' or text == 'بحبق' or text == 'بحبك' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'اختشي ياد عيب', url="t.me/SourceBaki"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/addbaki/13&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'جيت' or text == 'انا جيت' or text == 'بخ' or text == 'قيت' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'تعالى فحضني وحشتني', url="t.me/SourceBaki"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/addbaki/15&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'عايز مح' or text == 'هات مح' or text == 'بوسه' or text == 'مح' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'امممممممممموااااااه', url="t.me/SourceBaki"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/addbaki/16&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'كتابات' or text == 'كتابه' or text == 'كتب' or text == 'اسكريبت' then
+local Text = [[
+THE GREAT WRITER
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'فــواصــل🌿❤️', url="t.me/mokfhr"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/addbaki/17&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'طيزك' or text == 'تيزك' or text == 'طيز' or text == 'طيز' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'خد عشان مش تحرقك', url="t.me/mokfhr"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/addbaki/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'تخ' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'مووووووووووووت', url="t.me/SourceBaki"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/addbaki/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
+local Text = [[
+
+╭━━━❲☆━━━━━☆❳━━━╮
+[𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐴𝐾𝐼](t.me/SourceBaki)
+[𝑡ℎ𝑒 𝑑𝑒𝑒𝑝 𝑠𝑜𝑢𝑟𝑐𝑒 𝑖𝑛 𝑡𝑒𝑙𝑒𝑔𝑟𝑎𝑚](t.me/SourceBaki)
+╰━━━❲☆━━━━━☆❳━━━╯
+]]  
+keyboard = {}   
+keyboard.inline_keyboard = {  
+{{text = ' ツبہقہدونہسہ', url="https://t.me/Baki_Owner"}},  
+{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙱𝙰𝙺𝙸', url="https://t.me/SourceBaki"}},  
+}  
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AddBaki/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 
 if text == 'باكي' or text == 'بہقہدونہسہ' or text == 'بقدونس' or text == '♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫' then
 local Text = [[  
@@ -11926,60 +12003,17 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/U_K_G&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == ""..(database:get(bot_id..'Name:Bot') or 'باكي').."" then  
-Namebot = (database:get(bot_id..'Name:Bot') or 'باكي')
-local DRAGON_Msg = {
-'ننعم يروحي 😻💙',
-'نعم يا قلب  '..Namebot..'',
-'عاوز اي من '..Namebot..'',
-'دوختو  '..Namebot..'',
-'بتشقط وجي ويت 🤪',
-'ايوا جاي 🙈',
-'يعم هتسحر واجي 😾',
-'طب متصلي على النبي كدا 🙂💜',
-'تع اشرب شاي 🥺💙',
-'دوس على الخوخه 🍑',
-'متيجي 😉',
-'ياض خش نام 😂',
-'انا '..Namebot..' احسن البوتات 🤩♥️',
-'نعم'
-}
-send(msg.chat_id_, msg.id_,'['..DRAGON_Msg[math.random(#DRAGON_Msg)]..']') 
-return false
-end
-if text == "بوت" then
-local Namebot = (database:get(bot_id..'Name:Bot') or 'باكي') 
-local DRAGON_Msg = { 
-'اسمي  '..Namebot..' يا قلبي 🤤💚',
-'اسمي '..Namebot..' يا روحي🙈❤️',
-'اسمي  '..Namebot..' يعمري♥️',
-'اسمي  '..Namebot..' يا قمر 🐭🤍',
-'اسمي  '..Namebot..' يامزه 🥺❤️',
-'اسمي  '..Namebot..' يعم 😒',
-'مقولت اسمي '..Namebot..' في اي 🙄',
-'اسمي الكيوت '..Namebot..' 🌝💘',
-'اسمي  '..Namebot..' ياحياتي🧸♥️',
-'اسمي  '..Namebot..' يوتكه🙈🍑',
-} 
-Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
+if text == 'بوت' or text 'يا بوت' then 
+local Text = [[  
+]]  
+keyboard = {}   
+keyboard.inline_keyboard = {  
+{{text = 'نعم يا قلبي',url="t.me/sourcebaki"}},
+{{text = 'الـمـطـور ↯', url="http://t.me/"..sudos.UserName}},
+{{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}},
+}  
 local msg_id = msg.id_/2097152/0.5  
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور ↯', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
-},
-}
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
-end 
-end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/U_K_G&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == "اسمي"  then 
