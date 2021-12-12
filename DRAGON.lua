@@ -945,13 +945,10 @@ send(msg.chat_id_, msg.id_, SourceDRAGONr)
 end
 if not database:get(bot_id..'Start:Time'..msg.sender_user_id_) then
 local start = database:get(bot_id.."Start:Bot")  
-if Chat_Type == 'UserBot' then
-if not DevSoFi(msg) then
-if text == '/start' then  
-local bl = {
-  'مرحبا بيك عزيزي العضو اليك الاوامر في الاسفل',
-}
-local keyboard = {
+if start then 
+keyboard = start
+else
+keyboard = {
 {'مبرمج السورس'},
 {'♫ ━━━❲☆ 𝐵𝐴𝐾𝐼 ☆❳━━━♫ '},
 {'قناة السورس','بوت التواصل'},
@@ -11929,42 +11926,10 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/U_K_G&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == "تغير اسم البوت" or text == "تغيير اسم البوت" then 
-if DevSoFi(msg) then
-if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
-else
-send(msg.chat_id_, msg.id_,' ♫لا تستطيع استخدام البوت \n ♫♫يرجى الاشتراك بالقناه اولا \n ♫ ♫شترك هنا ['..database:get(bot_id..'add:ch:username')..']')
-end
-return false
-end
-database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
-send(msg.chat_id_, msg.id_," ♫ارسل لي الاسم الان ")  
-end
-return false
-end
-if msg.content_.ID == "MessageChatJoinByLink" then
-print("This is [ Msg Join By link ]")
-if database:get(bot_id.."UnKedDeleteMessage"..msg.chat_id_) == "open" then
-local Text = 'اهلاً بك في المجموعة\n للتأكد بأنك لست { ربوت }\n تم تقييدك اضغط الزر بالاسفل\n للتأكد انك { عضو حقيقي }\n'
-keyboard = {}
-keyboard.inline_keyboard = {{{text = '- اضغط هنا لفك تقييدك •', callback_data="/UnKed"},},}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..tokenbot.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..msg.sender_user_id_)
-database:sadd(bot_id.."database:Un:Ked"..msg.chat_id_,msg.sender_user_id_)
-https.request("https://api.telegram.org/bot"..tokenbot..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-return false
-end
-msg_type = 'MSG:NewUser'
-end
-
-
 if text == ""..(database:get(bot_id..'Name:Bot') or 'باكي').."" then  
 Namebot = (database:get(bot_id..'Name:Bot') or 'باكي')
 local DRAGON_Msg = {
-'نعم يروحي♥️🙈',
+'ننعم يروحي 😻💙',
 'نعم يا قلب  '..Namebot..'',
 'عاوز اي من '..Namebot..'',
 'دوختو  '..Namebot..'',
@@ -11978,23 +11943,9 @@ local DRAGON_Msg = {
 'ياض خش نام 😂',
 'انا '..Namebot..' احسن البوتات 🤩♥️',
 'نعم'
-} 
-Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
-local msg_id = msg.id_/2097152/0.5  
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
-},
 }
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
-end 
-end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+send(msg.chat_id_, msg.id_,'['..DRAGON_Msg[math.random(#DRAGON_Msg)]..']') 
+return false
 end
 if text == "بوت" then
 local Namebot = (database:get(bot_id..'Name:Bot') or 'باكي') 
